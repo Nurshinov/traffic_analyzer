@@ -2,7 +2,7 @@ FROM keinos/sqlite3 AS sqlite
 
 WORKDIR "/data"
 
-RUN /usr/bin/sqlite3 store.db "CREATE TABLE IPStat (IP Text, All_ Integer, Retransmitted Integer)"
+RUN /usr/bin/sqlite3 store.db "CREATE TABLE IPStat (address Text, all_ Integer, retransmitted Integer);"
 
 FROM golang AS build
 
